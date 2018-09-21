@@ -1,8 +1,15 @@
 public class MyDate{
 	private int my_date_;
+	private String my_date1;
 	
 	public MyDate(int date) {
 		SetMyDate(date);
+		GetMyDate();
+	}
+
+	public MyDate(String date) {
+		SetMyDate(date);
+		GetMyDateString();
 	}
 	
 	public void SetMyDate(int date) {
@@ -13,7 +20,7 @@ public class MyDate{
 	
 	public void SetMyDate(String date) {
 		//assume that the date will be in the format mm/dd/yyyy
-		//my_date_ = 
+		my_date1 = date;
 	}
 	
 	public int GetMyDate() {
@@ -22,19 +29,28 @@ public class MyDate{
 	
 	public String GetMyDateString() {
 		//please return a date string in the format yyyymmdd
+		String [] str_array = my_date1.split("/");
+		String my_date2 = String.join("",str_array[2],str_array[1],str_array[0]);
+		return my_date2;
 	}
 	
-	public String GetMyDateString1() {
+	/*public String GetMyDateString1() {
 		//please return a date string in the format of mm/dd/yyyy 
 	}
 	
 	public String GetMyDateString2() {
 		//please return a date string in the format of dd/mm/yyyy
-	}
+	}*/
 	
 	public boolean IsLeapYear(int year) {
 		//please return true if the year is a leap year
 		//return false if the year is not a leap year
+		if(year%4 == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 	

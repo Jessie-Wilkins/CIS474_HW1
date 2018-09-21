@@ -1,6 +1,9 @@
 public class StockSimulation{
 	public static void main(String[] args) {
+
+
 		MyDate date = new MyDate("01/01/2018");
+		System.out.println(date.GetMyDateString());
 		
 		if(date.IsLeapYear(2018)) {
 			System.out.println("2018 is a leap year");
