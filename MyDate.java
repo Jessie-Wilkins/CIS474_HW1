@@ -4,12 +4,12 @@ public class MyDate{
 	
 	public MyDate(int date) {
 		SetMyDate(date);
-		GetMyDate();
+	
 	}
 
 	public MyDate(String date) {
 		SetMyDate(date);
-		GetMyDateString();
+		
 	}
 	
 	public void SetMyDate(int date) {
@@ -30,20 +30,29 @@ public class MyDate{
 	public String GetMyDateString() {
 		//please return a date string in the format yyyymmdd
 		String [] str_array = my_date1.split("/");
-		String my_date2 = String.join("",str_array[2],str_array[1],str_array[0]);
+		String my_date2 = String.join("",str_array[2],str_array[0],str_array[1]);
 		return my_date2;
 	}
 	
-	/*public String GetMyDateString1() {
+	public String GetMyDateString1() {
 		//please return a date string in the format of mm/dd/yyyy
 		String [] str_array = my_date1.split("/");
+<<<<<<< HEAD
 		String my_date3 = String.join("",str_array[0],str_array[1],str_array[2]);
 		return my_date3;
+=======
+		String my_date2 = String.join("/",str_array[0],str_array[1],str_array[2]);
+		return my_date2;
+>>>>>>> cb8396c12b3c188f5ef4f5d7ac897ace92397bd9
 	}
 	
 	public String GetMyDateString2() {
+            // return null;
 		//please return a date string in the format of dd/mm/yyyy
-	}*/
+               String [] str_array = my_date1.split("/");
+               String my_date = String.join("",str_array[1],"/",str_array[0], "/", str_array[2]);
+		return my_date; 
+	}
 	
 	public boolean IsLeapYear(int year) {
 		//please return true if the year is a leap year
